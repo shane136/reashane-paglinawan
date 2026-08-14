@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #F7F7F5;
+    --card-main: #FFFFFF;
+    --card-sub: #EFF2F1;
+    --border-main: #D5DDD9;
+    
+    --text-primary: #1F2E2B;
+    --text-muted: #4E635F;
+    --text-subtle: #798E8A;
+    
+    --c-terracotta: #C98B80;
+    --c-teal: #5B7B75;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+  }
+}
