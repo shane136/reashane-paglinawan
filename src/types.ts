@@ -1,3 +1,13 @@
+export interface ProjectAttachment {
+  id: string;
+  name: string;
+  size: number; // in bytes
+  type: string; // mime or extension
+  uploadedAt: string;
+  dataUrl?: string; // base64 or blob url for client-side download/preview
+  isSample?: boolean;
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -5,13 +15,20 @@ export interface Project {
   description: string;
   longDescription: string;
   techStack: string[];
-  category: 'web' | 'automation' | 'iot' | 'all';
+  category: 'web' | 'automation' | 'iot' | 'document' | 'other' | string;
   githubUrl?: string;
+  liveDemoUrl?: string;
+  status?: 'completed' | 'in-progress' | 'live' | 'archived';
   stars?: number;
   featured: boolean;
   keyFeatures: string[];
   updatedAt?: string;
   iconName: string;
+  thumbnailUrl?: string;
+  watermarkLabel?: string;
+  projectNumber?: number;
+  attachments?: ProjectAttachment[];
+  isUserUploaded?: boolean;
 }
 
 export interface SkillCategory {
@@ -25,13 +42,22 @@ export interface SkillCategory {
   }[];
 }
 
+export interface ExperienceItem {
+  role: string;
+  period: string;
+  department: string;
+  institution?: string;
+  points: string[];
+}
+
 export interface EducationItem {
   degree: string;
   institution: string;
   gradDate: string;
   location: string;
-  highlights: string[];
-  coursework: string[];
+  internship?: ExperienceItem;
+  coursework?: string[];
+  highlights?: string[];
 }
 
 export interface VbaSnippet {

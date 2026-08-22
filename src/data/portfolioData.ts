@@ -3,99 +3,180 @@ import { Project, SkillCategory, EducationItem, VbaSnippet, LatexTemplate } from
 export const USER_PROFILE = {
   name: "Reashane Paglinawan",
   username: "shane136",
-  title: "IoT Developer & Front-end Web Developer",
-  subTitle: "Specializing in IoT Systems, Front-end Web Development, PHP & CodeIgniter 4, Excel VBA Automation, and LaTeX",
-  bio: "BS Computer Applications graduate from MSU-IIT with specialized experience in IoT systems, Front-end web development, PHP & CodeIgniter 4, Excel VBA automation, and LaTeX scientific typesetting.",
+  title: "IoT & Front-end Web Developer",
+  subTitle: "Passionate about building reliable web platforms, intelligent automation solutions, IoT systems, and embedded applications.",
+  bio: "I’m an IoT & Front-end Web Developer passionate about building reliable web platforms, intelligent automation solutions, IoT systems, and embedded applications. My work focuses on Front-end Web Development, PHP & CodeIgniter 4, AI-assisted development, Excel VBA automation, IoT, and Embedded Systems. I enjoy using AI assistants to explore ideas, solve development challenges, improve workflows, and build websites and applications more efficiently. I also enjoy working with microcontrollers, sensors, and embedded technologies to create practical systems that connect hardware and software. From sensor-based projects to automated devices, I’m interested in developing solutions that interact with the real world.",
+  bioParagraph1: "I’m an IoT & Front-end Web Developer passionate about building reliable web platforms, intelligent automation solutions, IoT systems, and embedded applications.",
+  bioParagraph2: "My work focuses on Front-end Web Development, PHP & CodeIgniter 4, AI-assisted development, Excel VBA automation, IoT, and Embedded Systems. I enjoy using AI assistants to explore ideas, solve development challenges, improve workflows, and build websites and applications more efficiently.",
+  bioParagraph3: "I also enjoy working with microcontrollers, sensors, and embedded technologies to create practical systems that connect hardware and software. From sensor-based projects to automated devices, I’m interested in developing solutions that interact with the real world.",
   avatarUrl: "https://raw.githubusercontent.com/shane136/portfolio/main/assets/img/profile.jpg",
   fallbackAvatarUrl: "https://avatars.githubusercontent.com/u/73520530?v=4",
   githubUrl: "https://github.com/shane136",
   portfolioRepoUrl: "https://github.com/shane136/portfolio",
   location: "Iligan City, Philippines",
   email: "preashane5@gmail.com",
-  statusMessage: "Available for IoT & Front-end Web Development Roles",
-  educationDegree: "Bachelor of Science in Computer Applications",
+  statusMessage: "Available for Web Development, Automation & IoT Roles",
+  educationDegree: "Bachelor of Science in Computer Applications Major in Internet of Things",
   educationSchool: "Mindanao State University - Iligan Institute of Technology (MSU-IIT)",
   gradYear: "July 2022"
 };
 
+export const WHAT_I_DO_ITEMS = [
+  {
+    title: "Front-end Web Development",
+    description: "Building responsive and user-friendly websites and web platforms using PHP, CodeIgniter 4, and modern web technologies.",
+    icon: "Layout"
+  },
+  {
+    title: "AI-Assisted Development",
+    description: "Using AI assistants to brainstorm, troubleshoot, improve development workflows, and accelerate website and application development.",
+    icon: "Sparkles"
+  },
+  {
+    title: "IoT Systems",
+    description: "Developing sensor-based systems for monitoring, automation, and real-world applications.",
+    icon: "Cpu"
+  },
+  {
+    title: "Embedded Systems",
+    description: "Working with microcontrollers, sensors, Arduino, and other embedded technologies to build practical hardware-software solutions.",
+    icon: "Radio"
+  },
+  {
+    title: "Workflow Automation",
+    description: "Creating automated spreadsheet workflows and productivity tools using Excel VBA.",
+    icon: "Zap"
+  },
+  {
+    title: "Backend & Application Development",
+    description: "Building structured and maintainable applications with PHP and CodeIgniter 4.",
+    icon: "Code2"
+  }
+];
+
+export const MY_APPROACH = {
+  paragraph1: "I enjoy turning ideas into simple, reliable, and practical technology solutions. My interests span web development, AI, automation, IoT, and embedded systems, allowing me to work across both software and hardware.",
+  paragraph2: "I’m continuously learning, experimenting with new technologies, and exploring better ways to combine software, hardware, automation, and AI to build useful digital and real-world solutions."
+};
+
 export const PROJECTS_DATA: Project[] = [
   {
-    id: "drr-fe",
-    title: "Disaster Risk Reduction Management System",
-    repoName: "drr-fe",
-    description: "Web-based disaster response, hazard mapping, and municipal emergency management platform.",
-    longDescription: "A comprehensive web application designed for municipal Disaster Risk Reduction and Management Councils (DRRMC). Enables real-time incident logging, disaster response unit dispatching, evacuation center monitoring, and interactive community risk mapping built on CodeIgniter 4.",
-    techStack: ["PHP", "CodeIgniter 4", "MySQL", "JavaScript", "HTML5/CSS3", "REST API"],
+    id: "andam-ai",
+    projectNumber: 1,
+    title: "ANDAM AI – 24/7 AI Chatbot for Disaster Safety and Preparedness",
+    repoName: "andam-ai",
+    description: "Your 24/7 AI Chatbot for Disaster Safety and Preparedness in Iligan City. Features multilingual AI assistance (Bisaya, Filipino, English), ICDRRMD emergency hotlines, barangay risk mapping, safety guides, and family go-bag checklists.",
+    longDescription: "A dedicated disaster risk reduction and management (DRRM) web platform built for Iligan City. Provides 24/7 AI-assisted emergency advisory grounded in official updates from Iligan ICDRRMD, DOST-PAGASA, and DOST-PHIVOLCS. Includes barangay-level risk assessments, family go-bag preparedness checklists, multilingual language switching (Bisaya, Filipino, English), voice output, and instant emergency hotline dispatching.",
+    techStack: ["React", "TypeScript", "Tailwind CSS", "Next.js", "AI DRRM Assistant", "Multi-language (Bisaya/Filipino/English)", "Vercel"],
     category: "web",
-    githubUrl: "https://github.com/shane136/drr-fe",
-    stars: 0,
+    liveDemoUrl: "https://andam-ai.vercel.app/",
+    status: "live",
+    stars: 5,
     featured: true,
-    updatedAt: "2023-10-22",
-    iconName: "ShieldAlert",
+    updatedAt: "2026-08",
+    iconName: "Sparkles",
+    watermarkLabel: "ANDAM AI • VERIFIED LIVE",
+    thumbnailUrl: "/src/assets/images/andam_ai_screenshot_1787398363041.jpg",
     keyFeatures: [
-      "Real-time disaster incident logging & geolocation tagging",
-      "Evacuation center capacity tracking & resource inventory",
-      "Emergency notification dispatch to localized units",
-      "Responsive municipal hazard map integration"
+      "Iligan City DRRM AI Assistant: Verified responses grounded in ICDRRMD, DOST-PAGASA, and DOST-PHIVOLCS",
+      "Multilingual Support: Seamless switching between Bisaya (Cebuano), Filipino, and English",
+      "Barangay-Specific Risk Advisory & Emergency Hotlines (221-8459, 0997-726-2692, 0969-233-7878)",
+      "Family Go-Bag & Disaster Safety Preparedness Interactive Guides",
+      "Live interactive web application deployed on Vercel (andam-ai.vercel.app)"
     ]
   },
   {
-    id: "Project",
-    title: "Barangay Information & e-Services System",
-    repoName: "Project",
-    description: "Digital community administration portal for requesting official certificates and resident records online.",
-    longDescription: "An online barangay information portal streamling citizen service requests. Residents can apply for official certificates (Indigency, Barangay Clearance, Certificate of Residency) remotely, while barangay staff verify, process, and issue digital records via an administrative control panel.",
-    techStack: ["PHP", "MySQL", "Bootstrap", "JavaScript", "Web Architecture"],
-    category: "web",
-    githubUrl: "https://github.com/shane136/Project",
-    stars: 3,
+    id: "iot-rainwater-harvesting-thesis",
+    projectNumber: 2,
+    title: "IoT-Based Smart Rainwater Harvesting with Monitoring and Filtration System",
+    repoName: "iot-smart-rainwater-harvesting",
+    description: "Undergraduate Thesis (MSU-IIT): An automated IoT rainwater harvesting system with ultrafiltration water purification, ThingSpeak cloud telemetry, MIT App Inventor Android monitoring, and GSM SMS alerts.",
+    longDescription: "Undergraduate Thesis conducted at Mindanao State University - Iligan Institute of Technology (MSU-IIT), College of Computer Studies, Department of Computer Applications. Designed to alleviate potable water scarcity for upland communities in Zone 15 & 17, Fatima, Abuno, Iligan City. Features a multi-stage water treatment system incorporating an ultrafiltration water purification system, three Arduino Uno microcontrollers, ultrasonic level sensors, pH sensor, water flow sensor, rain sensor, servo-controlled valve, ThingSpeak IoT cloud logging, MIT App Inventor Android mobile app, and GSM SMS notifications.",
+    techStack: ["IoT System", "Arduino Uno", "ThingSpeak Cloud", "MIT App Inventor", "GSM Module", "Ultrasonic Sensors", "pH Sensor", "Ultrafiltration", "Chemical Analysis"],
+    category: "iot",
+    liveDemoUrl: "https://drive.google.com/file/d/1LFj46eiEwWgFcoYlPs7mcm45rPJvRGM6/view?usp=sharing",
+    status: "completed",
+    stars: 5,
     featured: true,
-    updatedAt: "2026-01-27",
-    iconName: "FileCheck2",
+    updatedAt: "MSU-IIT Thesis",
+    iconName: "Cpu",
+    watermarkLabel: "MSU-IIT THESIS • GOOGLE DRIVE",
+    thumbnailUrl: "",
     keyFeatures: [
-      "Online certificate request workflow (Indigency, Clearance, Residency)",
-      "Resident database with secure verification status",
-      "Admin dashboard with automated PDF document generation",
-      "Audit trail for issued barangay documents"
+      "Ultrafiltration Water Purification: Chemical analysis confirmed compliance with Philippine National Standards for Drinking Water (PNSDW 2017) for pH, TDS, and temperature",
+      "IoT Cloud Telemetry: Real-time sensor logging to ThingSpeak Cloud Server and custom MIT App Inventor Android mobile application",
+      "Multi-Microcontroller Architecture: 3 Arduino Uno boards coordinating 3 water tanks (18L per container), ultrasonic level sensors, water flow meter, and rain sensor",
+      "Automated GSM SMS Alerts: Instant SMS notifications dispatched for water acid/mineral levels, tank capacity states, and filtration status",
+      "Servo-Actuated Rain Inflow: Automatic diversion of pre-filtered vs. post-filtered rainwater via servo-controlled ball valve and rain sensor triggers"
     ]
   },
   {
-    id: "Web_HairSalon",
-    title: "Hair Salon Web Appointment System",
-    repoName: "Web_HairSalon",
-    description: "Interactive online reservation and appointment scheduling platform for salon services.",
-    longDescription: "A web platform allowing customers to view salon service catalogs, select stylists, inspect real-time schedule availability, and book appointments online. Features dynamic DOM updates and responsive layout styling.",
-    techStack: ["JavaScript", "HTML5", "CSS3", "DOM Manipulation"],
-    category: "web",
-    githubUrl: "https://github.com/shane136/Web_HairSalon",
-    stars: 0,
-    featured: false,
-    updatedAt: "2021-01-21",
-    iconName: "Scissors",
+    id: "smart-blind-stick",
+    projectNumber: 3,
+    title: "Smart Blind Stick with Arduino Uno",
+    repoName: "smart-blind-stick-arduino",
+    description: "Capstone Project (BCA188 Embedded Systems): A sensor-equipped assistive white cane with ultrasonic obstacle detection, LDR ambient darkness alerts, sound-triggered find-my-stick buzzer, and MIT App Inventor Bluetooth voice output.",
+    longDescription: "Capstone Project for BCA188 (Embedded Systems). Developed a low-cost, multi-sensor assistive navigation white cane designed to empower visually impaired individuals to navigate unfamiliar environments safely and independently. Integrates an HC-SR04 ultrasonic distance sensor, an LDR ambient light sensor, a high-sensitivity sound sensor, twin piezo buzzers, status LEDs, and an HC-05 Bluetooth transceiver linked to a custom MIT App Inventor Android companion application that provides real-time spoken voice guidance.",
+    techStack: ["Arduino Uno", "MIT App Inventor", "HC-05 Bluetooth", "Ultrasonic Sensor", "LDR Light Sensor", "Sound Sensor", "Embedded Systems", "C++ / Hardware"],
+    category: "embedded",
+    liveDemoUrl: "https://drive.google.com/file/d/1q0O2CSbukqFi9krv4dNYKIT05aR94OEh/view?usp=sharing",
+    status: "completed",
+    stars: 5,
+    featured: true,
+    updatedAt: "Capstone Project",
+    iconName: "Cpu",
+    watermarkLabel: "CAPSTONE • GOOGLE DRIVE",
+    thumbnailUrl: "",
     keyFeatures: [
-      "Dynamic service selection and price calculator",
-      "Interactive time-slot booking grid",
-      "Stylist roster & specialization profiles",
-      "Mobile-first responsive booking interface"
+      "01 / Obstacle Sensing (Ultrasonic): Measures distance up to 40cm ahead and triggers audible buzzer + LED alerts",
+      "02 / Ambient Light Detection (LDR): Reads ambient light levels and sounds a darkness alert when conditions change",
+      "03 / Find-My-Stick (Sound Sensor): Listens for a clap or whistle and responds with buzzer tones to easily relocate the cane",
+      "MIT App Inventor Android App: Bluetooth (HC-05) communication speaking obstacle distances aloud via Text-to-Speech",
+      "Hardware Architecture: 2× Arduino Uno, 9V battery power with 5V regulation, and 40.5\" lightweight PVC cane build"
+    ]
+  },
+  {
+    id: "purok-data-automation",
+    projectNumber: 4,
+    title: "Purok Data Automation & Clearance System (Excel VBA)",
+    repoName: "excel-vba-purok-system",
+    description: "Custom desktop Excel VBA UserForm solution built for local barangay community record-keeping, real-time census metrics calculation, resident ledger management, and one-click official Purok Clearance generation.",
+    longDescription: "A custom desktop automation tool built in Microsoft Excel VBA featuring a dual-tab UserForm interface (HOME Dashboard & LIST OF RESIDENTS). Provides real-time calculation of total population, printed clearances, and gender demographics, alongside a complete resident database with search filtering, record update/edit/delete actions, and automated Purok Clearance document generation.",
+    techStack: ["Excel VBA", "VBA UserForm", "Desktop Automation", "Macro Programming", "Database Ledger", "Certificate Printing"],
+    category: "automation",
+    liveDemoUrl: "",
+    status: "completed",
+    stars: 5,
+    featured: true,
+    updatedAt: "Excel VBA",
+    iconName: "FileSpreadsheet",
+    watermarkLabel: "EXCEL VBA • USERFORM",
+    thumbnailUrl: "",
+    keyFeatures: [
+      "Dual-Tab VBA UserForm: Seamless switching between 'HOME' statistical dashboard and 'LIST OF RESIDENTS' registry",
+      "Real-Time Demographics Engine: Live tally of Total Population (10), Printed Clearances (36), and Male (5) / Female (5) distribution",
+      "Interactive Resident Management: Form controls for Last Name, First Name, Middle Name, Religion, Age, Sex, Marital Status, Contact, and Voter Status",
+      "Multi-Field Search & Filter: Instant filtering across Resident ID, Name, and Age with real-time listbox updates",
+      "Automated Purok Clearance Printing: One-click generation and print formatting of official barangay Purok Clearances"
     ]
   }
 ];
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
-    title: "Web Development & PHP",
-    description: "Building responsive web interfaces and structured backend systems with PHP and CodeIgniter 4.",
+    title: "Web Development & AI Solutions",
+    description: "Building responsive, modern web applications, interactive user interfaces, and integrating AI-assisted solutions.",
     skills: [
-      { name: "PHP & CodeIgniter 4", level: 90, icon: "Code2", details: "MVC architecture, application routing, database integration, REST APIs, session management" },
-      { name: "Front-end Web Development", level: 88, icon: "Layout", details: "HTML5, CSS3, JavaScript DOM interaction, responsive layouts, user interface engineering" }
+      { name: "Front-end & Web Apps", level: 92, icon: "Layout", details: "Responsive UI engineering, React/Next.js workflows, modern JavaScript/TypeScript, DOM interaction, HTML5/CSS3" },
+      { name: "PHP & CodeIgniter 4", level: 90, icon: "Code2", details: "MVC architecture, application routing, database integration, REST APIs, session management" }
     ]
   },
   {
-    title: "VBA Automation",
-    description: "Eliminating repetitive manual spreadsheet tasks with custom Excel VBA subroutines and macros.",
+    title: "Workflow & Spreadsheet Automation",
+    description: "Designing streamlined workflow automations, AI prompt pipelines, and eliminating repetitive manual spreadsheet tasks.",
     skills: [
-      { name: "Excel VBA Automation", level: 95, icon: "FileSpreadsheet", details: "Worksheet event macros, automated data extraction, multi-sheet consolidations, error handling" },
-      { name: "Automated Report Generation", level: 90, icon: "Zap", details: "Automated PDF batch report export, formatted output generation, spreadsheet data validation" }
+      { name: "Digital Workflow Automation", level: 90, icon: "Zap", details: "Automated task pipelines, AI-assisted process workflows, API orchestration, and structured data handling" },
+      { name: "Excel VBA Automation", level: 95, icon: "FileSpreadsheet", details: "Worksheet event macros, automated data extraction, multi-sheet consolidations, error handling & batch reports" }
     ]
   },
   {
@@ -117,127 +198,243 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 ];
 
 export const EDUCATION_DATA: EducationItem = {
-  degree: "Bachelor of Science in Computer Applications",
+  degree: "Bachelor of Science in Computer Applications Major in Internet of Things",
   institution: "Mindanao State University - Iligan Institute of Technology (MSU-IIT)",
   gradDate: "Graduated July 2022",
   location: "Iligan City, Lanao del Norte, Philippines",
-  highlights: [
-    "Specialized in Computer Applications, Web Development, and Applied Systems.",
-    "Developed practical capstone projects focusing on municipal digital services and web management systems.",
-    "Trained in software architecture, database management, and technical documentation."
-  ],
+  internship: {
+    role: "Research Assistant Intern (On-The-Job)",
+    period: "Jan 2022 – Jun 2022",
+    department: "College of Computer Studies - Department of Computer Applications",
+    points: [
+      "Assisted in research development under the project “Design and Development of a Microcontroller-based Water Level and Soil Moisture Monitoring and an Irrigation Scheduling System for Rice Farming”.",
+      "Contributed to research documentation, hardware testing, embedded laboratory maintenance, and the implementation of basic logic circuits to support system development and testing."
+    ]
+  },
   coursework: [
-    "Web Application Development",
+    "Internet of Things & Embedded Systems",
+    "Microcontrollers & Sensor Interfacing",
+    "Web Application Development (PHP & CodeIgniter)",
     "Database Management Systems",
-    "Object-Oriented Programming",
-    "Software Engineering Principles",
-    "Systems Analysis & Design"
+    "Object-Oriented Programming"
   ]
 };
 
 export const VBA_SNIPPETS: VbaSnippet[] = [
   {
-    id: "auto-consolidate",
-    title: "Auto-Consolidate Worksheets",
-    description: "Loops through all worksheets in a workbook, validates data columns, and aggregates rows into a master summary sheet.",
-    useCase: "Consolidating monthly departmental reports into a single unified master audit table.",
-    code: `Sub ConsolidateWorksheets()
-    Dim ws As Worksheet, wsMaster As Worksheet
-    Dim lastRow As Long, masterLastRow As Long
-    
-    Application.ScreenUpdating = False
-    On Error GoTo ErrorHandler
-    
-    ' Set or create Master sheet
-    Set wsMaster = Worksheets("Master Summary")
-    masterLastRow = wsMaster.Cells(wsMaster.Rows.Count, "A").End(xlUp).Row + 1
-    
-    For Each ws In ThisWorkbook.Worksheets
-        If ws.Name <> "Master Summary" And ws.Name <> "Config" Then
-            lastRow = ws.Cells(ws.Rows.Count, "A").End(xlUp).Row
-            If lastRow >= 2 Then
-                ws.Range("A2:E" & lastRow).Copy
-                wsMaster.Range("A" & masterLastRow).PasteSpecial xlPasteValues
-                masterLastRow = wsMaster.Cells(wsMaster.Rows.Count, "A").End(xlUp).Row + 1
-            End If
-        End If
-    Next ws
-    
-    Application.CutCopyMode = False
-    Application.ScreenUpdating = True
-    MsgBox "Worksheet consolidation completed successfully!", vbInformation, "Automation Complete"
-    Exit Sub
+    id: "purok-automation-userform",
+    title: "Purok Data Automation & Census Dashboard (UserForm1)",
+    description: "Interactive Excel VBA UserForm providing a centralized community dashboard with live population and gender census counters, resident registration, and real-time records management.",
+    useCase: "Streamlining barangay/purok resident census logging, dynamic gender demographic tracking, and real-time record lookup directly within Excel.",
+    code: `' =========================================================================
+' UserForm1: PUROK DATA AUTOMATION - Dashboard & Records Manager
+' Developed by: Reashane Paglinawan
+' =========================================================================
 
-ErrorHandler:
-    Application.ScreenUpdating = True
-    MsgBox "An error occurred: " & Err.Description, vbCritical, "VBA Error"
-End Sub`
-  },
-  {
-    id: "data-sanitizer",
-    title: "Data Sanitizer & Email Extractor",
-    description: "Cleans leading/trailing whitespace, converts case formatting, and validates email syntax across selected range.",
-    useCase: "Pre-processing raw customer lead exports before database import.",
-    code: `Sub SanitizeCustomerData()
-    Dim cell As Range, targetRange As Range
-    Dim emailPattern As String, regEx As Object
+Option Explicit
+
+Private Sub UserForm_Initialize()
+    ' Initialize Dashboard Census Metrics
+    Call RefreshDashboardMetrics
     
-    Set targetRange = Selection
-    Set regEx = CreateObject("VBScript.RegExp")
-    
-    With regEx
-        .Pattern = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
-        .IgnoreCase = True
+    ' Populate Dropdown Options
+    With cboSex
+        .Clear
+        .AddItem "MALE"
+        .AddItem "FEMALE"
     End With
     
-    For Each cell In targetRange
-        If Not IsEmpty(cell.Value) Then
-            ' Trim and Clean
-            cell.Value = Trim(Application.WorksheetFunction.Clean(cell.Value))
-            
-            ' Check if column is email
-            If InStr(cell.Value, "@") > 0 Then
-                If Not regEx.Test(cell.Value) Then
-                    cell.Interior.Color = RGB(255, 230, 230) ' Flag invalid email in light red
-                Else
-                    cell.Value = LCase(cell.Value)
-                    cell.Interior.Color = RGB(230, 255, 230) ' Valid email light green
-                End If
+    With cboMaritalStatus
+        .Clear
+        .AddItem "SINGLE"
+        .AddItem "MARRIED"
+        .AddItem "WIDOWED"
+        .AddItem "DIVORCED"
+    End With
+    
+    With cboVoterStatus
+        .Clear
+        .AddItem "REGISTERED"
+        .AddItem "NON-REGISTERED"
+    End With
+    
+    ' Load Residents into ListBox
+    Call LoadResidentsList
+End Sub
+
+Public Sub RefreshDashboardMetrics()
+    Dim ws As Worksheet
+    Dim lastRow As Long, i As Long
+    Dim totalPop As Long, maleCount As Long, femaleCount As Long, clearanceCount As Long
+    
+    Set ws = ThisWorkbook.Sheets("RESIDENTS_DB")
+    lastRow = ws.Cells(ws.Rows.Count, "A").End(xlUp).Row
+    
+    totalPop = 0
+    maleCount = 0
+    femaleCount = 0
+    
+    If lastRow >= 2 Then
+        totalPop = lastRow - 1
+        For i = 2 To lastRow
+            If UCase(Trim(ws.Cells(i, 6).Value)) = "MALE" Then
+                maleCount = maleCount + 1
+            ElseIf UCase(Trim(ws.Cells(i, 6).Value)) = "FEMALE" Then
+                femaleCount = femaleCount + 1
             End If
-        End If
-    Next cell
-    MsgBox "Data sanitization complete!", vbInformation, "Success"
+        Next i
+    End If
+    
+    ' Retrieve printed clearances counter
+    clearanceCount = ThisWorkbook.Sheets("CONFIG").Range("B2").Value
+    
+    ' Update Dashboard Labels
+    lblPopulation.Caption = totalPop
+    lblMaleCount.Caption = maleCount
+    lblFemaleCount.Caption = femaleCount
+    lblPrintedClearances.Caption = clearanceCount
 End Sub`
   },
   {
-    id: "pdf-exporter",
-    title: "Batch PDF Report Exporter",
-    description: "Generates custom invoice/report PDFs for each record and saves them automatically into structured folders.",
-    useCase: "Automating monthly certificate and receipt generation with custom filenames.",
-    code: `Sub ExportBatchPDFs()
-    Dim wsInvoice As Worksheet, wsData As Worksheet
-    Dim i As Long, lastRow As Long
-    Dim savePath As String, fileName As String
+    id: "purok-add-resident",
+    title: "Add Resident & Automated Data Formatting Subroutine",
+    description: "Validates user inputs, automatically generates sequential IDs, cleans whitespace, appends data to the Excel database, and refreshes the live census.",
+    useCase: "Ensuring structured data integrity when registering new residents into the purok database.",
+    code: `Private Sub cmdAdd_Click()
+    Dim ws As Worksheet
+    Dim nextRow As Long, newID As Long
     
-    Set wsInvoice = Worksheets("InvoiceTemplate")
-    Set wsData = Worksheets("ClientList")
-    savePath = ThisWorkbook.Path & "\\GeneratedPDFs\\"
+    ' Validation Checks
+    If Trim(txtLastName.Text) = "" Or Trim(txtFirstName.Text) = "" Then
+        MsgBox "Please enter Last Name and First Name.", vbExclamation, "Missing Information"
+        txtLastName.SetFocus
+        Exit Sub
+    End If
     
-    If Dir(savePath, vbDirectory) = "" Then MkDir savePath
+    If cboSex.Value = "" Then
+        MsgBox "Please select gender.", vbExclamation, "Validation Error"
+        Exit Sub
+    End If
     
-    lastRow = wsData.Cells(wsData.Rows.Count, "A").End(xlUp).Row
+    Set ws = ThisWorkbook.Sheets("RESIDENTS_DB")
+    nextRow = ws.Cells(ws.Rows.Count, "A").End(xlUp).Row + 1
     
-    For i = 2 To lastRow
-        wsInvoice.Range("C4").Value = wsData.Cells(i, 1).Value ' Client Name
-        wsInvoice.Range("C5").Value = wsData.Cells(i, 2).Value ' ID
+    If nextRow = 2 Then
+        newID = 1
+    Else
+        newID = ws.Cells(nextRow - 1, 1).Value + 1
+    End If
+    
+    ' Write to database
+    ws.Cells(nextRow, 1).Value = newID
+    ws.Cells(nextRow, 2).Value = UCase(Trim(txtLastName.Text))
+    ws.Cells(nextRow, 3).Value = UCase(Trim(txtFirstName.Text))
+    ws.Cells(nextRow, 4).Value = UCase(Trim(txtMiddleName.Text))
+    ws.Cells(nextRow, 5).Value = Val(txtAge.Text)
+    ws.Cells(nextRow, 6).Value = UCase(Trim(cboSex.Text))
+    ws.Cells(nextRow, 7).Value = UCase(Trim(cboMaritalStatus.Text))
+    ws.Cells(nextRow, 8).Value = UCase(Trim(txtReligion.Text))
+    ws.Cells(nextRow, 9).Value = Trim(txtContact.Text)
+    ws.Cells(nextRow, 10).Value = UCase(Trim(cboVoterStatus.Text))
+    
+    ' Refresh UI and Clear Form
+    Call RefreshDashboardMetrics
+    Call LoadResidentsList
+    Call ClearFormFields
+    
+    MsgBox "Resident record successfully added with ID #" & newID, vbInformation, "Record Saved"
+End Sub`
+  },
+  {
+    id: "purok-clearance-generator",
+    title: "Automated Purok Clearance Document & Print Preview Generator",
+    description: "Extracts selected resident details, populates an official legal certification template sheet, computes the 3-month validity date, increments the clearance log counter, and triggers Excel Print Preview.",
+    useCase: "Instant generation of official Purok Clearance documents for legal identification, employment, or barangay transactions.",
+    code: `Public Sub PrintPurokClearance(residentID As Long)
+    Dim wsDB As Worksheet, wsClearance As Worksheet, wsConfig As Worksheet
+    Dim matchRow As Variant, fullName As String
+    Dim currentDate As String, issueDay As String
+    
+    Set wsDB = ThisWorkbook.Sheets("RESIDENTS_DB")
+    Set wsClearance = ThisWorkbook.Sheets("PUROK_CLEARANCE")
+    Set wsConfig = ThisWorkbook.Sheets("CONFIG")
+    
+    ' Locate resident row
+    matchRow = Application.Match(residentID, wsDB.Columns(1), 0)
+    If IsError(matchRow) Then
+        MsgBox "Resident record not found!", vbCritical, "Error"
+        Exit Sub
+    End If
+    
+    ' Format Full Name: LAST NAME, FIRST NAME MIDDLE NAME
+    fullName = wsDB.Cells(matchRow, 2).Value & ", " & _
+               wsDB.Cells(matchRow, 3).Value & " " & _
+               wsDB.Cells(matchRow, 4).Value
+               
+    ' Inject dynamic fields into Clearance Template
+    currentDate = Format(Date, "dddd, d mmmm yyyy")
+    
+    With wsClearance
+        .Range("B8").Value = "This is to certify that " & fullName & ", Filipino, of legal age, and a resident of Zone 1, Barangay Unknown, Wolves City, Lanao del Norte, Philippines has personally appeared before me and has submitted the necessary documents to support the issuance of a Purok Clearance."
+        .Range("B14").Value = "This Purok Clearance is valid for 3 months from the date of issuance."
+        .Range("B16").Value = "Issued this " & currentDate & " at Zone 1, Barangay Unknown, Wolves City, Lanao del Norte, Philippines."
         
-        fileName = savePath & wsData.Cells(i, 2).Value & "_" & Replace(wsData.Cells(i, 1).Value, " ", "_") & ".pdf"
+        ' Increment Clearance Log Counter
+        wsConfig.Range("B2").Value = wsConfig.Range("B2").Value + 1
         
-        wsInvoice.ExportAsFixedFormat Type:=xlTypePDF, fileName:=fileName, _
-            Quality:=xlQualityStandard, IncludeDocProperties:=True, OpenAfterPublish:=False
-    Next i
+        ' Open Print Preview
+        .PrintPreview
+    End With
     
-    MsgBox "Exported " & (lastRow - 1) & " PDF reports to: " & savePath, vbInformation, "Batch Export Complete"
+    Call RefreshDashboardMetrics
+End Sub`
+  },
+  {
+    id: "purok-generate-list",
+    title: "Generate Formatted Residents Data Sheet & Roster Report",
+    description: "Compiles all resident demographic records into a clean 'RESIDENTS DATA' sheet with highlighted headers, bordered cells, and landscape print formatting.",
+    useCase: "Generating official community census rosters for barangay council reviews and audit submissions.",
+    code: `Public Sub GenerateResidentsListReport()
+    Dim wsDB As Worksheet, wsReport As Worksheet
+    Dim lastRow As Long
+    
+    Set wsDB = ThisWorkbook.Sheets("RESIDENTS_DB")
+    Set wsReport = ThisWorkbook.Sheets("RESIDENTS DATA")
+    
+    lastRow = wsDB.Cells(wsDB.Rows.Count, "A").End(xlUp).Row
+    If lastRow < 2 Then
+        MsgBox "No resident records found to generate report.", vbInformation, "Empty Database"
+        Exit Sub
+    End If
+    
+    Application.ScreenUpdating = False
+    
+    ' Clear and format Report Sheet
+    wsReport.Cells.Clear
+    wsReport.Range("A2:I2").Merge
+    wsReport.Range("A2").Value = "RESIDENTS DATA"
+    wsReport.Range("A2").Font.Bold = True
+    wsReport.Range("A2").HorizontalAlignment = xlCenter
+    
+    ' Copy headers and data
+    wsDB.Range("A1:I" & lastRow).Copy wsReport.Range("A4")
+    
+    ' Apply Header Styling (Yellow Banner)
+    With wsReport.Range("A4:I4")
+        .Interior.Color = RGB(255, 255, 0) ' Yellow Header
+        .Font.Bold = True
+        .Font.Name = "Calibri"
+        .Font.Size = 10
+    End With
+    
+    ' Auto-fit columns and set borders
+    wsReport.Columns("A:I").AutoFit
+    wsReport.Range("A4:I" & (lastRow + 3)).Borders.LineStyle = xlContinuous
+    
+    Application.ScreenUpdating = True
+    
+    ' Show Print Preview
+    wsReport.PrintPreview
 End Sub`
   }
 ];

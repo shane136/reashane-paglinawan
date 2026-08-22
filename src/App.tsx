@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
-import { SkillsSection } from './components/SkillsSection';
+import { ProjectsSection } from './components/ProjectsSection';
 import { EducationSection } from './components/EducationSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -28,11 +28,11 @@ export default function App() {
 
       {/* Main Content Sections */}
       <main>
-        {/* Hero Banner Section */}
+        {/* Hero Banner Section (Overview, What I Do, My Approach) */}
         <Hero onNavigate={scrollToSection} />
 
-        {/* Technical Skills Matrix */}
-        <SkillsSection />
+        {/* Web-Based Projects & Uploads */}
+        <ProjectsSection />
 
         {/* Education Timeline (MSU-IIT) */}
         <EducationSection />

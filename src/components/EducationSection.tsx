@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, MapPin, Calendar, BookOpen, CheckCircle2, Award, Landmark } from 'lucide-react';
+import { GraduationCap, MapPin, Calendar, BookOpen, Briefcase, Landmark } from 'lucide-react';
 import { EDUCATION_DATA } from '../data/portfolioData';
 import { seaMistStyles as s } from '../utils/themeStyles';
 
@@ -12,19 +12,20 @@ export const EducationSection: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider border ${s.badgeTeal}`}>
             <GraduationCap className="w-3.5 h-3.5" />
-            <span>Academic Background</span>
+            <span>Academic & Research Background</span>
           </div>
           <h2 className={`text-3xl sm:text-4xl font-extrabold tracking-tight ${s.text}`}>
             Education & Academic Foundation
           </h2>
           <p className={`text-sm sm:text-base leading-relaxed ${s.textMuted}`}>
-            Undergraduate computer science and application training at Mindanao State University - Iligan Institute of Technology.
+            Undergraduate degree and applied research training at Mindanao State University - Iligan Institute of Technology.
           </p>
         </div>
 
-        {/* Education Card */}
+        {/* Education & Experience Card */}
         <div className={`max-w-4xl mx-auto border rounded-3xl p-8 sm:p-10 shadow-xs space-y-8 relative overflow-hidden ${s.cardBg} ${s.border}`}>
           
+          {/* Degree Header */}
           <div className={`flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b ${s.border}`}>
             <div className="flex items-start gap-4">
               <div className={`p-4 rounded-2xl border shrink-0 ${s.badgeTeal}`}>
@@ -56,35 +57,56 @@ export const EducationSection: React.FC = () => {
             </span>
           </div>
 
-          <div className="space-y-3">
-            <h4 className={`text-xs font-bold uppercase tracking-wider flex items-center gap-2 ${s.textSubtle}`}>
-              <Award className="w-4 h-4 text-[#C98B80]" /> Program Focus & Accomplishments
-            </h4>
-            <div className="space-y-2">
-              {EDUCATION_DATA.highlights.map((highlight, idx) => (
-                <div key={idx} className={`flex items-start gap-2.5 p-3 rounded-xl border text-xs sm:text-sm ${s.subCardBg} ${s.textMuted}`}>
-                  <CheckCircle2 className="w-4 h-4 text-[#C98B80] shrink-0 mt-0.5" />
-                  <span>{highlight}</span>
+          {/* Research Assistant Intern (On-The-Job) */}
+          {EDUCATION_DATA.internship && (
+            <div className="space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div className="space-y-1">
+                  <h4 className={`text-base sm:text-lg font-bold flex items-center gap-2 ${s.text}`}>
+                    <Briefcase className="w-4 h-4 text-[#5B7B75]" />
+                    <span>{EDUCATION_DATA.internship.role}</span>
+                  </h4>
+                  <p className="text-xs sm:text-sm font-medium text-[#5B7B75]">
+                    {EDUCATION_DATA.internship.department}
+                  </p>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="space-y-3 pt-2">
-            <h4 className={`text-xs font-bold uppercase tracking-wider flex items-center gap-2 ${s.textSubtle}`}>
-              <BookOpen className="w-4 h-4 text-[#5B7B75]" /> Key Coursework & Specializations
-            </h4>
-            <div className="flex flex-wrap gap-2">
-              {EDUCATION_DATA.coursework.map((course) => (
-                <span 
-                  key={course}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-medium border ${s.badgeBg}`}
-                >
-                  {course}
+                <span className="text-xs font-mono font-semibold px-3 py-1 rounded-xl bg-[#1F2E2B]/5 border border-[#1F2E2B]/10 text-[#1F2E2B] self-start sm:self-center">
+                  {EDUCATION_DATA.internship.period}
                 </span>
-              ))}
+              </div>
+
+              <div className="space-y-2.5 pt-1">
+                {EDUCATION_DATA.internship.points.map((point, idx) => (
+                  <div 
+                    key={idx} 
+                    className={`flex items-start gap-3 p-3.5 rounded-2xl border text-xs sm:text-sm leading-relaxed ${s.subCardBg} ${s.textMuted}`}
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#5B7B75] mt-2 shrink-0" />
+                    <span>{point}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
+
+          {/* Coursework & Specializations */}
+          {EDUCATION_DATA.coursework && EDUCATION_DATA.coursework.length > 0 && (
+            <div className={`space-y-3 pt-4 border-t ${s.border}`}>
+              <h4 className={`text-xs font-bold uppercase tracking-wider flex items-center gap-2 ${s.textSubtle}`}>
+                <BookOpen className="w-4 h-4 text-[#5B7B75]" /> Key Coursework &amp; Specializations
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {EDUCATION_DATA.coursework.map((course) => (
+                  <span 
+                    key={course}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-medium border ${s.badgeBg}`}
+                  >
+                    {course}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
 
         </div>
 

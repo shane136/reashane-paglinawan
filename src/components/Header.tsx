@@ -28,7 +28,7 @@ export const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection 
 
   const navItems = [
     { id: 'about', label: 'Overview' },
-    { id: 'skills', label: 'Skills' },
+    { id: 'projects', label: 'Projects' },
     { id: 'education', label: 'Education' },
     { id: 'contact', label: 'Contact' }
   ];

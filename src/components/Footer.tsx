@@ -36,7 +36,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           {/* Nav Links */}
           <div className={`flex flex-wrap items-center justify-center gap-4 text-xs font-medium ${s.textMuted}`}>
             <button onClick={() => onNavigate('about')} className={`hover:${s.text} transition-colors`}>Overview</button>
-            <button onClick={() => onNavigate('skills')} className={`hover:${s.text} transition-colors`}>Skills</button>
+            <button onClick={() => onNavigate('projects')} className={`hover:${s.text} transition-colors`}>Projects</button>
             <button onClick={() => onNavigate('education')} className={`hover:${s.text} transition-colors`}>Education</button>
             <button onClick={() => onNavigate('contact')} className={`hover:${s.text} transition-colors`}>Contact</button>
           </div>
