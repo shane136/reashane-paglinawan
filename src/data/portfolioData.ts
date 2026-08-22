@@ -12,6 +12,7 @@ export const USER_PROFILE = {
   avatarUrl: "https://raw.githubusercontent.com/shane136/portfolio/main/assets/img/profile.jpg",
   fallbackAvatarUrl: "https://avatars.githubusercontent.com/u/73520530?v=4",
   githubUrl: "https://github.com/shane136",
+  linkedinUrl: "https://www.linkedin.com/in/reashane-paglinawan-003138244",
   portfolioRepoUrl: "https://github.com/shane136/portfolio",
   location: "Iligan City, Philippines",
   email: "preashane5@gmail.com",

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { 
   Mail, 
   Github, 
+  Linkedin,
   Copy, 
   Check, 
   MapPin, 
@@ -87,18 +88,18 @@ export const ContactSection: React.FC = () => {
                       )}
                     </button>
                     <a
-                      href={`mailto:${USER_PROFILE.email}`}
-                      className={`p-2.5 rounded-xl border flex items-center gap-1.5 font-bold text-xs ${s.btnPrimary}`}
-                      title="Open default email client"
+                      href={`mailto:${USER_PROFILE.email}?subject=Project%20Inquiry%20/%20Collaboration&body=Hi%20Reashane,%0D%0A%0D%0AI%20would%20like%20to%20connect%20with%20you%20regarding...`}
+                      className={`px-3 py-2.5 rounded-xl border flex items-center gap-1.5 font-bold text-xs shadow-xs transition-all ${s.btnPrimary}`}
+                      title="Compose email to reashane136@gmail.com"
                     >
-                      <Send className="w-4 h-4 text-[#FFF275]" />
-                      <span className="hidden sm:inline">Email</span>
+                      <Send className="w-3.5 h-3.5" />
+                      <span>Send Email</span>
                     </a>
                   </div>
                 </div>
               </div>
 
-              {/* GitHub Profile Box */}
+                            {/* GitHub Profile Box */}
               <div className={`p-5 rounded-2xl border space-y-2 ${s.subCardBg}`}>
                 <span className={`text-[11px] font-mono font-bold uppercase tracking-wider ${s.textSubtle}`}>
                   GitHub Profile
@@ -112,6 +113,28 @@ export const ContactSection: React.FC = () => {
                   <span className="flex items-center gap-2.5">
                     <Github className="w-5 h-5 text-[#5B7B75]" />
                     <span>github.com/{USER_PROFILE.username}</span>
+                  </span>
+                  <div className="flex items-center gap-1 text-xs font-mono text-[#5B7B75] group-hover:underline">
+                    <span>Visit profile</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </div>
+                </a>
+              </div>
+
+              {/* LinkedIn Profile Box */}
+              <div className={`p-5 rounded-2xl border space-y-2 ${s.subCardBg}`}>
+                <span className={`text-[11px] font-mono font-bold uppercase tracking-wider ${s.textSubtle}`}>
+                  LinkedIn Profile
+                </span>
+                <a 
+                  href="https://www.linkedin.com/in/reashane-paglinawan-003138244"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex items-center justify-between font-bold transition-colors text-sm sm:text-base ${s.text} hover:text-[#5B7B75] group`}
+                >
+                  <span className="flex items-center gap-2.5">
+                    <Linkedin className="w-5 h-5 text-[#5B7B75]" />
+                    <span>linkedin.com/in/reashane-paglinawan</span>
                   </span>
                   <div className="flex items-center gap-1 text-xs font-mono text-[#5B7B75] group-hover:underline">
                     <span>Visit profile</span>
