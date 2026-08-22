@@ -88,12 +88,14 @@ export const ContactSection: React.FC = () => {
                       )}
                     </button>
                     <a
-                      href={`mailto:${USER_PROFILE.email}?subject=Project%20Inquiry%20/%20Collaboration&body=Hi%20Reashane,%0D%0A%0D%0AI%20would%20like%20to%20connect%20with%20you%20regarding...`}
+                      href={`https://mail.google.com/mail/?view=cm&fs=1&to=${USER_PROFILE.email}&su=${encodeURIComponent('Project Inquiry / Collaboration')}&body=${encodeURIComponent('Hi Reashane,\n\nI would like to connect with you regarding...')}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`px-3 py-2.5 rounded-xl border flex items-center gap-1.5 font-bold text-xs shadow-xs transition-all ${s.btnPrimary}`}
-                      title="Compose email to reashane136@gmail.com"
+                      title="Compose email to reashane136@gmail.com via Gmail"
                     >
-                      <Send className="w-3.5 h-3.5" />
-                      <span>Send Email</span>
+                    <Send className="w-3.5 h-3.5" />
+                    <span>Send Email</span>
                     </a>
                   </div>
                 </div>
