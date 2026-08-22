@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { USER_PROFILE, WHAT_I_DO_ITEMS, MY_APPROACH } from '../data/portfolioData';
 import { seaMistStyles as s } from '../utils/themeStyles';
+import profile1Img from '../assets/images/profile-1.jpg';
 
 interface HeroProps {
   onNavigate: (sectionId: string) => void;
@@ -126,7 +127,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                 {/* Profile Image */}
                 <div className="relative mx-auto w-40 h-40 sm:w-44 sm:h-44 rounded-2xl overflow-hidden border p-1 shadow-inner group border-[#D5DDD9] bg-[#EFF2F1]">
                   <img
-                    src={imgError ? USER_PROFILE.fallbackAvatarUrl : USER_PROFILE.avatarUrl}
+                    src={imgError ? USER_PROFILE.fallbackAvatarUrl : (profile1Img || USER_PROFILE.avatarUrl)}
                     onError={() => setImgError(true)}
                     alt={USER_PROFILE.name}
                     className="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-105"
