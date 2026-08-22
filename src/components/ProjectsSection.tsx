@@ -24,6 +24,7 @@ import { ProjectDetailsModal } from './ProjectDetailsModal';
 import { SmartBlindStickModal } from './SmartBlindStickModal';
 import { PurokVbaModal } from './PurokVbaModal';
 import { Project } from '../types';
+import andamAiScreenshot from '../assets/images/andam_ai_screenshot_1787398363041.jpg';
 
 export const ProjectsSection: React.FC = () => {
   const [selectedDetailsProject, setSelectedDetailsProject] = useState<Project | null>(null);
@@ -186,9 +187,9 @@ export const ProjectsSection: React.FC = () => {
                 <span>Click to launch interactive UserForm simulation</span>
               </div>
             </div>
-          ) : project.thumbnailUrl ? (
+          ) : (project.id === 'andam-ai' || project.thumbnailUrl) ? (
             <img
-              src={project.thumbnailUrl}
+              src={project.id === 'andam-ai' ? andamAiScreenshot : project.thumbnailUrl}
               alt={project.title}
               className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
               referrerPolicy="no-referrer"
@@ -344,7 +345,7 @@ export const ProjectsSection: React.FC = () => {
   };
 
   return (
-    <section id="projects" className={`py-20 relative border-b ${s.border}`}>
+    <section id="projects" className={`pt-6 pb-20 lg:pt-8 lg:pb-24 relative border-b ${s.border}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Section Header */}

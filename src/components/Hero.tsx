@@ -42,7 +42,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   };
 
   return (
-    <section id="about" className="relative pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden">
+    <section id="about" className="relative pt-28 pb-6 lg:pt-36 lg:pb-8 overflow-hidden">
       
       {/* Gentle background accent blur */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[#B5C4C0]/20 rounded-full blur-[100px] pointer-events-none" />
