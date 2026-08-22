@@ -62,7 +62,7 @@ export const ContactSection: React.FC = () => {
                     </span>
                   )}
                 </div>
-                <div className="flex items-center justify-between gap-3">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                   <a 
                     href={`mailto:${USER_PROFILE.email}`}
                     className="font-bold hover:underline break-all text-sm sm:text-base text-[#5B7B75]"
