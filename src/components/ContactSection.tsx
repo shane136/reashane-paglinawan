@@ -21,26 +21,6 @@ export const ContactSection: React.FC = () => {
     setTimeout(() => setCopiedEmail(false), 2000);
   };
 
-  const handleSendEmail = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-
-    const subject = encodeURIComponent('Project Inquiry / Collaboration');
-    const body = encodeURIComponent('Hi Reashane,\n\nI would like to connect with you regarding...');
-    const isMobile = /Android|iPhone|iPad|iPod/i.test(
-      typeof navigator !== 'undefined' ? navigator.userAgent : ''
-    );
-
-    if (isMobile) {
-      window.location.href = `mailto:${USER_PROFILE.email}?subject=${subject}&body=${body}`;
-    } else {
-      window.open(
-        `https://mail.google.com/mail/?view=cm&fs=1&to=${USER_PROFILE.email}&su=${subject}&body=${body}`,
-        '_blank',
-        'noopener,noreferrer'
-      );
-    }
-  };
-
   return (
     <section id="contact" className={`py-20 border-t ${s.border}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,14 +32,14 @@ export const ContactSection: React.FC = () => {
             <span>Connect &amp; Collaborate</span>
           </div>
           <h2 className={`text-3xl sm:text-4xl font-extrabold tracking-tight ${s.text}`}>
-            Let's Build Something Together
+            Let’s Build Something Together
           </h2>
           <div className={`text-sm sm:text-base leading-relaxed space-y-3 ${s.textMuted}`}>
             <p>
-              Interested in Web Development, AI-assisted development, IoT, Embedded Systems, or workflow automation? I'm always open to connecting, sharing ideas, and collaborating on practical technology projects.
+              Interested in Web Development, AI-assisted development, IoT, Embedded Systems, or workflow automation? I’m always open to connecting, sharing ideas, and collaborating on practical technology projects.
             </p>
             <p>
-              Whether you're looking to build a website, web application, IoT system, embedded project, or automation solution, feel free to reach out and let's explore what we can create together.
+              Whether you’re looking to build a website, web application, IoT system, embedded project, or automation solution, feel free to reach out and let’s explore what we can create together.
             </p>
           </div>
         </div>
@@ -85,14 +65,14 @@ export const ContactSection: React.FC = () => {
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                   <a 
                     href={`mailto:${USER_PROFILE.email}`}
-                    className="font-bold hover:underline break-all text-xs sm:text-base text-[#5B7B75]"
+                    className="font-bold hover:underline break-all text-sm sm:text-base text-[#5B7B75]"
                   >
                     {USER_PROFILE.email}
                   </a>
                   <div className="flex items-center gap-2 shrink-0">
                     <button
                       onClick={handleCopyEmail}
-                      className={`p-2.5 rounded-xl border flex items-center gap-1.5 font-semibold text-xs transition-all shrink-0 ${s.btnSecondary}`}
+                      className={`p-2.5 rounded-xl border flex items-center gap-1.5 font-semibold text-xs transition-all ${s.btnSecondary}`}
                       title="Copy email address"
                     >
                       {copiedEmail ? (
@@ -107,11 +87,12 @@ export const ContactSection: React.FC = () => {
                         </>
                       )}
                     </button>
-                    
-                      href={`mailto:${USER_PROFILE.email}?subject=${encodeURIComponent('Project Inquiry / Collaboration')}&body=${encodeURIComponent('Hi Reashane,\n\nI would like to connect with you regarding...')}`}
-                      onClick={handleSendEmail}
-                      className={`flex-1 sm:flex-none px-3 py-2.5 rounded-xl border flex items-center justify-center gap-1.5 font-bold text-xs shadow-xs transition-all whitespace-nowrap ${s.btnPrimary}`}
-                      title="Compose email to reashane136@gmail.com"
+                    <a
+                      href={`https://mail.google.com/mail/?view=cm&fs=1&to=${USER_PROFILE.email}&su=${encodeURIComponent('Project Inquiry / Collaboration')}&body=${encodeURIComponent('Hi Reashane,\n\nI would like to connect with you regarding...')}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`px-3 py-2.5 rounded-xl border flex items-center gap-1.5 font-bold text-xs shadow-xs transition-all ${s.btnPrimary}`}
+                      title="Compose email to reashane136@gmail.com via Gmail"
                     >
                     <Send className="w-3.5 h-3.5" />
                     <span>Send Email</span>

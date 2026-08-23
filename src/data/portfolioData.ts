@@ -216,8 +216,7 @@ export const EDUCATION_DATA: EducationItem = {
     "Internet of Things & Embedded Systems",
     "Microcontrollers & Sensor Interfacing",
     "Web Application Development (PHP & CodeIgniter)",
-    "Database Management Systems",
-    "Object-Oriented Programming"
+    "Database Management Systems"
   ]
 };
 
