@@ -128,7 +128,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               // rel="noopener noreferrer"
               // className={`inline-flex items-center gap-2 px-4 py-3 rounded-xl font-medium text-sm ${s.textMuted} hover:${s.text}`}
               >
-                <Github className="w-4 h-4 text-[#5B7B75]" />
+                {/* <Github className="w-4 h-4 text-[#5B7B75]" /> */}
                 <span className="underline underline-offset-4 font-mono">
                   {USER_PROFILE.username}
                 </span>
