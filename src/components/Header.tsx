@@ -59,11 +59,11 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
             <div>
               <div className="flex items-center gap-2">
-                {/* <span
+                <span
                   className={`font-bold text-base tracking-tight ${s.text}`}
                 >
                   {USER_PROFILE.name}
-                </span> */}
+                </span>
                 <span
                   className={`hidden sm:inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-medium border ${s.badgeTeal}`}
                 >
