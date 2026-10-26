@@ -82,17 +82,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             © {new Date().getFullYear()} Reashane Paglinawan. All rights
             reserved. BSCA - MSU-IIT.
           </p>
-          <div className="flex items-center gap-3">
+          {/* <div className="flex items-center gap-3">
             <a
               href={USER_PROFILE.portfolioRepoUrl}
               target="_blank"
               rel="noopener noreferrer"
               className={`hover:${s.text} flex items-center gap-1 transition-colors`}
             >
-              {/* <Github className="w-3.5 h-3.5 text-[#5B7B75]" />
-              <span>shane136/portfolio</span> */}
+              <Github className="w-3.5 h-3.5 text-[#5B7B75]" />
+              <span>shane136/portfolio</span>
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
